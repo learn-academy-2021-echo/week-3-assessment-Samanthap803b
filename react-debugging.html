@@ -63,11 +63,12 @@
           // No need to change anything ABOVE this line ^
 
           return(
+              <>
               <h1>Draw a Card</h1>
-              <button onClick={}>
+              <button onClick={this.drawCard}>
                 Click to Draw a Card
               </button>
-              <button onClick={shuffle}>
+              <button onClick={this.shuffle}>
                 Return Cards and Shuffle Deck
               </button>
               <div style={handStyles}>
@@ -79,10 +80,13 @@
                   )
                 })}
               </div>
+              </>
           )
         }
       }
-
+//I spend a good amount of time checking for missing parentesis and periods,
+// I try to do it myself without going to check my notes but at the and i had to review this chapter again.
+//I was checking for missing parts of my return and i founf that it was missing some fragments.
       // No need to change anything below this line
       const domContainer = document.querySelector('#react-container')
       ReactDOM.render(<App />, domContainer)
